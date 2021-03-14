@@ -3,6 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 import CaptureImage from '../screens/CaptureImage';
 import HowToUse from '../screens/HowToUse';
@@ -56,9 +57,11 @@ const TabNav = () => (
 );
 
 const Nav = () => (
-  <NavigationContainer>
-    <TabNav />
-  </NavigationContainer>
+  <SafeAreaProvider>
+    <NavigationContainer>
+      <TabNav />
+    </NavigationContainer>
+  </SafeAreaProvider>
 );
 
 export default Nav;

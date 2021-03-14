@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import Picker from 'react-native-image-picker';
 import getPredictions from '../api';
 import UploadButton from '../components/UploadButton';

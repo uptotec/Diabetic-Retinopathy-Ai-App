@@ -4,19 +4,18 @@ import {
   StyleSheet,
   Text,
   View,
-  Image,
   TouchableOpacity,
 } from 'react-native';
 import StepIndicator from 'react-native-step-indicator';
 
-const labels = ['No_DR', 'Mild', 'Moderate', 'Proliferate_DR', 'Severe'];
+const labels = ['No_DR', 'Mild', 'Moderate', 'Severe', 'Proliferate_DR'];
 
 const messages = [
   'You do not have Diabetic retinopathy disease. So, according to the current circumstances , There is no need for you to go to hospital.',
   'You do have diabetic retinopathy. Your case is Mild. You do not have to go to hospital but you must follow your medications.',
   'You do have diabetic retinopathy. Your case is moderate . You must go to hospital as soon as possible.',
-  'You do have diabetic retinopathy. Your case is proliferative  . You must go to hospital as soon as possible.',
   'You do have diabetic retinopathy. Your case is Severe . You must go to hospital as soon as possible.',
+  'You do have diabetic retinopathy. Your case is proliferative  . You must go to hospital as soon as possible.',
 ];
 
 const renderLabel = ({position, label, currentPosition}) => {
@@ -33,8 +32,7 @@ const renderLabel = ({position, label, currentPosition}) => {
 };
 
 const Results = ({route, navigation}) => {
-  const {result, imageUri} = route.params;
-  console.log(imageUri);
+  const {result} = route.params;
   const resultIndex = labels.indexOf(result);
   return (
     <View style={styles.container}>

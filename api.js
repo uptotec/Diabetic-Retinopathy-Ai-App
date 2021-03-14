@@ -13,7 +13,6 @@ const getPredictions = async (image) => {
       'https://dr-ai-server-rkdbbib34a-nw.a.run.app/analyze',
       data,
     );
-    console.log(response.data);
     return response.data;
   } catch (err) {
     console.log(err);
